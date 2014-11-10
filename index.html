@@ -2,8 +2,22 @@
 <html>
   <head>
     <title>Jsvcycling | App Idea Generator</title>
+    <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
+    <script>
+      var rootRef = new Firebase('https://jsvcycling-appidea.firebaseio.com/');
+      var appTypeRef = rootRef.child('app_type');
+      var verbRef = rootRef.child('verbs');
+      var nounRef = rootRef.child('nouns');
+      
+      function generate() {
+        // TODO
+        
+        document.getElementById('text').innerHTML = "App Idea";
+      }
+    </script>
   </head>
   <body>
-    <p>Hello</p>
+    <button type="button" onClick="generate()">Generate Idea</button>
+    <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
   </body>
 </html>
