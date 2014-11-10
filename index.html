@@ -13,10 +13,10 @@
         var noun = "";
         
         rootRef.on('value', function(data) {
-          appType = data.child('app_type').child(Math.floor(Math.random() * data.numChildren())).val();
-          verb = data.child('verbs').child(Math.floor(Math.random() * data.numChildren())).val();
-          adjective = data.child('adjectives').child(Math.floor(Math.random() * data.numChildren())).val();
-          noun = data.child('nouns').child(Math.floor(Math.random() * data.numChildren())).val();
+          appType = data.child('app_type').child(Math.floor(Math.random() * data.numChildren()) - 1).val();
+          verb = data.child('verbs').child(Math.floor(Math.random() * data.numChildren()) - 1).val();
+          adjective = data.child('adjectives').child(Math.floor(Math.random() * data.numChildren()) - 1).val();
+          noun = data.child('nouns').child(Math.floor(Math.random() * data.numChildren()) - 1).val();
         });
         
         var text = "You should make a " + appType + " that " + verb + " " + adjective + " " + noun + ".";
@@ -26,7 +26,7 @@
   </head>
   <body>
     <button type="button" onClick="generate()">Generate Idea</button>
-    <p>VERSION 0.1</p>
+    <p>VERSION 0.1.1</p>
     <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
   </body>
 </html>
