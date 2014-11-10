@@ -5,14 +5,22 @@
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
     <script>
       var rootRef = new Firebase('https://jsvcycling-appidea.firebaseio.com/');
-      var appTypeRef = rootRef.child('app_type');
-      var verbRef = rootRef.child('verbs');
-      var nounRef = rootRef.child('nouns');
       
       function generate() {
-        // TODO
+        var appType = "";
+        var verb = "";
+        var adjective = "";
+        var noun = "";
         
-        document.getElementById('text').innerHTML = "App Idea";
+        rootRef.on('value', function(data) {
+          appType = data.child('app_type').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
+          verb = data.child('verbs').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
+          adjective = data.child('adjectives').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
+          noun = data.child('nouns').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
+        });
+        
+        var text = "You should make a " + appType + " that " + verb + " " + adjective + " " + noun + ".";
+        document.getElementById('text').innerHTML = text;
       }
     </script>
   </head>
