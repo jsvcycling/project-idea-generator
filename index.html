@@ -13,10 +13,10 @@
         var noun = "";
         
         rootRef.on('value', function(data) {
-          appType = data.child('app_type').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
-          verb = data.child('verbs').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
-          adjective = data.child('adjectives').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
-          noun = data.child('nouns').child(Math.floor((Math.random() * data.numChildren()) + 1)).val();
+          appType = data.child('app_type').child(Math.floor(Math.random() * data.numChildren())).val();
+          verb = data.child('verbs').child(Math.floor(Math.random() * data.numChildren())).val();
+          adjective = data.child('adjectives').child(Math.floor(Math.random() * data.numChildren())).val();
+          noun = data.child('nouns').child(Math.floor(Math.random() * data.numChildren())).val();
         });
         
         var text = "You should make a " + appType + " that " + verb + " " + adjective + " " + noun + ".";
