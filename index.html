@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Jsvcycling | App Idea Generator</title>
+    
+    <link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+    
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
     <script>
       var rootRef = new Firebase('https://jsvcycling-appidea.firebaseio.com/');
@@ -25,7 +28,7 @@
     </script>
   </head>
   <body>
-    <button type="button" onClick="generate()">Generate Idea</button>
+    <paper-button raised onClick="generate()">Generate Idea</button>
     <p>VERSION 0.1.3</p>
     <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
   </body>
