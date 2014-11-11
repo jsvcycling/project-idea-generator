@@ -8,6 +8,13 @@
     <link rel="import" href="http://www.polymer-project.org/components/paper-shadow/paper-shadow.html">
     
     <style>
+      html,body {
+        height: 100%;
+        margin: 0;
+        background-color: #E5E5E5;
+        font-family: 'RobotoDraft', sans-serif;
+      }
+    
       .card {
         align-content: center;
         text-align: center;
@@ -58,7 +65,7 @@
   </head>
   <body>
     <paper-button raised class="generate" onClick="generate()">Generate Idea</paper-button>
-    <!-- <p>VERSION 0.1.18</p> -->
+    <!-- <p>VERSION 0.1.19</p> -->
     <paper-shadow class="card" z="1">
       <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
     </paper-shadow>
