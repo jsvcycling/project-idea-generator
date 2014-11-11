@@ -45,10 +45,10 @@
       var rootRef = new Firebase('https://jsvcycling-appidea.firebaseio.com/');
       
       function generate() {
-        var appType = "";
-        var verb = "";
-        var adjective = "";
-        var noun = "";
+        var appType;
+        var verb;
+        var adjective;
+        var noun;
         
         rootRef.on('value', function(data) {
           appType = data.child('app_type').child(Math.floor(Math.random() * data.child('app_type').numChildren())).val();
@@ -64,7 +64,7 @@
   </head>
   <body>
     <paper-button raised class="generate" onClick="generate()">Generate Idea</paper-button>
-    <!-- <p>VERSION 0.1.20</p> -->
+    <!-- <p>VERSION 0.1.21</p> -->
     <paper-shadow class="card" z="1">
       <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
     </paper-shadow>
