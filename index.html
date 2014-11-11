@@ -6,6 +6,22 @@
     <link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
     <link rel="import" href="http://www.polymer-project.org/components/paper-shadow/paper-shadow.html">
     
+    <style>
+      .card {
+        display: inline-block;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+      }
+      
+      .generate {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1px;
+      }
+    </style>
+    
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
     <script>
       var rootRef = new Firebase('https://jsvcycling-appidea.firebaseio.com/');
@@ -29,9 +45,9 @@
     </script>
   </head>
   <body>
-    <paper-button raised onClick="generate()">Generate Idea</paper-button>
+    <paper-button raised class="generate" onClick="generate()">Generate Idea</paper-button>
     <p>VERSION 0.1.6</p>
-    <paper-shadow z="1">
+    <paper-shadow class="card" z="1">
       <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
     </paper-shadow>
   </body>
