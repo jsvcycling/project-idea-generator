@@ -4,6 +4,7 @@
     <title>Jsvcycling | App Idea Generator</title>
     
     <link rel="import" href="http://www.polymer-project.org/components/paper-button/paper-button.html">
+    <link rel="import" href="http://www.polymer-project.org/components/paper-shadow/paper-shadow.html">
     
     <script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
     <script>
@@ -29,7 +30,9 @@
   </head>
   <body>
     <paper-button raised onClick="generate()">Generate Idea</paper-button>
-    <p>VERSION 0.1.5</p>
-    <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
+    <p>VERSION 0.1.6</p>
+    <paper-shadow z="1">
+      <p id="text">CLICK THE GENERATE BUTTON TO GENERATE A PROJECT IDEA</p>
+    </paper-shadow>
   </body>
 </html>
